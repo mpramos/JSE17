@@ -15,6 +15,9 @@
 //* let: Para variables que pueden cambiar.
 //* const: Para constantes que no cambian.
 //* var: Evitar usarlo, ya que tiene limitaciones de ámbito.
+x=3
+console.log(x+3);
+
 
 //! Ejemplo:
 
@@ -88,6 +91,9 @@ console.log($nombreUser);
 //* Sensibles a mayúsculas (edad y Edad son variables diferentes).
 let edad=35
 let Edad=36
+console.log(Edad);
+console.log(edad);
+
 let nombre='juan'
 Nombre='juana'
 console.log(Nombre);
@@ -116,12 +122,16 @@ let presidentePeru='👴'
 }
 //Bolivia
 let presidenteBolivia='👨‍🦱'
+let global='hola'
 {
  {
   let departamentoB1='La Paz'
   console.log(presidenteBolivia);
+  console.log(global);
+  console.log(departamentoB1);
   
 }
+console.log(departamentoB1)
 {
   let departamentoB2='Cochabamba'
   console.log(presidenteBolivia);
@@ -133,7 +143,7 @@ let presidenteBolivia='👨‍🦱'
 
 
 //! Ejemplo:
-//* Definimos el bloque de una programa mediante llaves {}
+//* Definimos el bloque de un programa mediante llaves {}
 {
   let edad = 25 // Solo accesible dentro del bloque, pero fuera del bloque no está definido
   {
@@ -198,6 +208,7 @@ console.log(typeof activo); // boolean
     let nombre='juana'
     console.log(nombre[1]);
     console.log(nombre[2]);
+    console.log(nombre[3]);
     
 //! Length
 // Propiedad que devuelve el numero de caracteres que existe en la cadena
@@ -205,9 +216,11 @@ console.log(typeof activo); // boolean
     console.log(nombre.length);
 //! Splice
 
-// El método splice permite agregar, eliminar o reemplazar elementos en un arreglo. Modifica el arreglo original.
+// El método splice permite agregar, eliminar o
+// reemplazar elementos en un arreglo. Modifica el arreglo original.
     let nombre='roberto'
     console.log(nombre.slice(2,3));
+    
     console.log(nombre);
 
 //* Ejemplo:
@@ -222,8 +235,8 @@ console.log(names); // -> ["Olivia", "Samuel"]
 //! Split
 // El método split convierte una cadena en un arreglo, dividiéndola en partes según un delimitador especificado.
 //* Ejemplo:
-let text = "Olivia,Emma,Mateo,Samuel";
-let namesArray = text.split(",");
+let text = "Olivia-Emma-Mateo-Samuel";
+let namesArray = text.split("-");
 console.log(namesArray); // -> ["Olivia", "Emma", "Mateo", "Samuel"]
 console.log(text);
 
@@ -241,10 +254,14 @@ console.log(words); // -> ["Hola", "a", "todos"]
 //! Ejemplo:
 let cadena = String(123); //👉 convierte 123 a string "123"
 let numeroDesdeCadena = Number("456"); //👉 convierte "456" a string 456
-let booleano = Boolean(1); // 👉 convierte 1 a booleano true
+let booleano = Boolean(0); // 👉 convierte 1 a booleano true
 console.log(typeof cadena);
 console.log(typeof numeroDesdeCadena);
 console.log(booleano);
+
+//! VALORES VERDADEROS Y FALSOS
+// Verdaderos => 'hola' true 123 -123 7.8
+// Falsos => '' false 0
 
 //? **Sección 3: Arreglos y Objetos**
 
@@ -279,6 +296,8 @@ console.log(names.length); // -> 4
 // let names = ["Olivia", "Emma", "Mateo", "Samuel" , ,"Amelia", ,"Amelia" ];
 names[5] = "Amelia";
 names[7] = "Amelia";
+names[0] = "Ximena"; 
+console.log(names);
 
 console.log(names.length); // -> 6
 
@@ -341,12 +360,14 @@ console.log(names); // -> ["Samuel", "Mateo", "Emma", "Olivia"]
 //* Ejemplo:
 let names = ["Olivia", "Emma", "Mateo","Daria"];
 let n1 = names.slice(2);
-console.log(n1); // -> ["Mateo", "Samuel"]
+console.log(n1); // -> ["Mateo", "Daria"]
+console.log(names);
+
 let n2 = names.slice(1, 3);
 console.log(n2); // -> ["Emma", "Mateo"]
 
 let n3 = names.slice(0, -2);
-console.log(n3); // -> ["Olivia", "Emma", "Mateo"]
+console.log(n3); // -> ["Olivia", "Emma"]
 
 let n4 = names.slice(-1);
 console.log(n4); // -> ["Samuel"]
@@ -395,11 +416,17 @@ console.log(nombre);
 
 
 //! 3. Hoisting con funciones
-// Las funciones declaradas con `function` son completamente "hoisted". Puedes llamarlas antes de declararlas.
+// Las funciones declaradas con `function` son completamente "hoisted". 
+// Puedes llamarlas antes de declararlas.
 saludar(); // -> "Hola, Mundo!"
 function saludar() {
     console.log("Hola, Mundo!");
 }
+
+console.log(name1);
+
+var name1='roberta'
+
 
 
 //? **Sección 4: Comentarios**
@@ -413,6 +440,8 @@ function saludar() {
 /*
 Este es un comentario
 multilínea
+jfjfjfjf
+jfjfjf
 */
 // let nombres=2345
 
@@ -434,7 +463,6 @@ console.log(suma);
 function calcularArea(radio) {
   return Math.PI * radio * radio;
 }
-Ñ
 //? **Resumen**
 //* Declara variables con let y const.
 //* Usa nombres claros y descriptivos.
