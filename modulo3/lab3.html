@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Volvamos a nuestra lista de contactos. 
+        // Después de algunos ajustes recientes (es decir, usar una matriz y objetos) 
+        // en realidad está comenzando a verse como una lista. Sin embargo, persistía
+        // un problema bastante grave. Los datos modificados en la lista, como agregar
+        // un nuevo contacto, deben proporcionarse de inmediato en el código del programa.
+        // ¿Y si queremos dar al usuario la posibilidad de introducir los datos del contacto 
+        // añadido mientras se ejecuta el programa? Modifique el programa para agregar, al 
+        // final de la lista, no el contacto, que se da en el código, sino el que el usuario 
+        // dará durante la ejecución del programa. Utilice el método prompt para hacer esto. 
+        // Al final, muestra el primer y el último contacto de la lista.
+        let contacts=[
+        {
+        name: "Maxwell Wright",
+        phone: "(0191) 719 6495",
+        email: "Curabitur.egestas.nunc@nonummyac.co.uk"
+        }, 
+        {
+        name: "Raja Villarreal",
+        phone: "0866 398 2895",
+        email: "posuere.vulputate@sed.com"
+        },
+         {
+        name: "Helen Richards",
+        phone: "0800 1111",
+        email: "libero@convallis.edu"
+        },
+
+]
+alert('Bienvenido al sistema de gestión de contactos');
+let newContactName = prompt("Introduce el nombre del nuevo contacto:");
+console.log(newContactName);
+let newContactPhone = prompt("Introduce el teléfono del nuevo contacto:");
+console.log(newContactPhone);
+let newContactEmail = prompt("Introduce el email del nuevo contacto:");
+console.log(newContactEmail);
+
+// Agregar el nuevo contacto al final de la lista
+
+let newContact = {
+    name: newContactName,
+    phone: newContactPhone,
+    email: newContactEmail
+    };
+
+ contacts.push(newContact)   
+ console.log("Nuevo contacto agregado:", newContact);
+ //Mostrar toda la lista de contactos
+ console.log("Lista de contactos actualizada:", contacts);
+
+//  alert("lista de contactos actualizada: " + JSON.stringify(contacts));
+// Mostrar el primer y último contacto de la lista
+let primerContacto = `${contacts[0].name}, ${contacts[0].phone}, ${contacts[0].email}`;
+let ultimoContacto = `${contacts[contacts.length - 1].name}, ${contacts[contacts.length - 1].phone}, ${contacts[contacts.length - 1].email}`;
+
+alert("Primer contacto: " + primerContacto + "\nÚltimo contacto: " + ultimoContacto);
+    </script>
+</body>
+</html>

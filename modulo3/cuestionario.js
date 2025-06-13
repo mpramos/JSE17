@@ -5,16 +5,17 @@
 // console.log(resultado);
 
 //* Opciones ✍:
-//* a) 17 
+//* a) 17 ✔
 //* b) 19
 //* c) 20
 //* d) 21
 
 //! 2. ¿Qué operador utilizamos para elevar un número a una potencia en JavaScript?
+console.log(2 ** 3); // 8
+
 //* Opciones ✍:
-console.log(2**3);
 //* a) ^
-//* b) ** 
+//* b) **  ✔ 
 //* c) **=
 //* d) ***
 
@@ -26,46 +27,46 @@ console.log(typeof texto);
 
 //! ¿Qué contendrá la variable texto después de la ejecución?
 //* Opciones ✍:
-//* a) "123"
-//* b) 123 
+//* a) "123" 
+//* b) 123   ✔
 //* c) NaN
 //* d) "+123"
 
 //! 4. Dado el siguiente código:
-let a = 5;
-let b = ++a;
+let a = 5; 
+let b = ++a; // Incremento previo b=6
 b = 6
 //! ¿Qué valores tendrán las variables a y b?
 //* Opciones ✍:
 //* a) a: 6, b: 5
 //* b) a: 5, b: 6 
-//* c) a: 6, b: 6 
+//* c) a: 6, b: 6 ✔
 //* d) a: 5, b: 5
 
 
 //! 5. Evalúa la expresión:
 console.log(!(false || true && false));
 //* Opciones ✍:
-//* a) true 
+//* a) true ✔
 //* b) false
 //* c) null
 //* d) undefined
 
 //! 6. Analiza la operación:
-// let resultado = "" || 42;
+let resultado = "" || 42;
+console.log(resultado);
 
 //! ¿Qué valor tendrá la variable resultado?
 //* Opciones ✍:
 //* a) ""
-//* b) 42 
+//* b) 42    ✔
 //* c) null
 //* d) false
-console.log(resultado);
 
 //! 7. ¿Qué resultado obtendremos al comparar las cadenas "Hola" y "hola" usando el operador >?
 //* Opciones ✍:
 //* a) true
-//* b) false 
+//* b) false    ✔
 //* c) "Hola"
 //* d) undefined
 console.log("Hola">"hola")
@@ -78,7 +79,7 @@ let y = (num == 5);
 
 //! ¿Qué valores tendrán x e y después de la ejecución?
 //* Opciones ✍:
-//* a) x: false, y: true 
+//* a) x: false, y: true ✔
 //* b) x: true, y: false
 //* c) x: true, y: true
 //* d) x: false, y: false
@@ -88,7 +89,7 @@ console.log(y);
 //! 9. ¿Qué operador permite verificar si dos valores son exactamente iguales y del mismo tipo?
 //* Opciones ✍:
 //* a) ==
-//* b) === 
+//* b) === ✔ 
 //* c) =
 //* d) !==
 
@@ -96,7 +97,7 @@ console.log(y);
 //* Opciones ✍:
 //* a) alert()
 //* b) prompt()
-//* c) confirm() 
+//* c) confirm() ✔
 //* d) dialog()
 
 //! 11. Dado el siguiente código:
@@ -104,7 +105,7 @@ let resultado = 10 / 0;
 
 //! ¿Qué contendrá la variable resultado después de su ejecución?
 //* Opciones ✍
-//* a) Infinity 
+//* a) Infinity ✔
 //* b) NaN
 //* c) 0
 //* d) undefined
@@ -113,17 +114,19 @@ console.log(resultado);
 //! 12. ¿Qué método convierte un número flotante en una cadena con un número fijo de decimales?
 //* Opciones ✍:
 //* a) toString()
-//* b) toFixed() 
+//* b) toFixed() ✔
 //* c) toPrecision()
 //* d) toDecimal()
+let d = (1000000000000000128).toString();
+console.log(d);
+console.log( typeof d);
 
-console.log((1000000000000000128).toString());
 console.log((1000000000000000128).toFixed(0));
 
 (1000000000000000128).toFixed(0); // '1000000000000000128'
 
 let numero=3.1415926
-let cadena=numero.toFixed(3)
+let cadena=numero.toFixed(2)
 // let cadena=numero.toString()
 console.log(cadena);
 console.log(typeof cadena);
@@ -132,14 +135,14 @@ console.log(typeof cadena);
 //* Opciones ✍:
 //* a) null
 //* b) undefined
-//* c) "Hola" 
+//* c) "Hola" ✔
 //* d) true
 
 //! 14. Analiza el siguiente código:
 let test = prompt("Ingresa algo", "Defecto");
 //! ¿Qué valor tendrá test si el usuario cierra el cuadro de diálogo sin ingresar nada?
 //* Opciones ✍:
-//* a) null 
+//* a) null ✔
 //* b) "Defecto"
-//* c) ""
+//* c) "" 
 //* d) undefined
