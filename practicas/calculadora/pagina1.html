@@ -6,7 +6,7 @@
     <title>Document</title>
     <style>
         body {
-            border:1px solid #00ff56;
+            border:5px solid #00ff56;
 ;
             background-color: #181717;
             font-family: Arial, sans-serif;
@@ -23,10 +23,52 @@
     </style>
 </head>
 <body>
-<h1>
-   calculadora
-</h1>
-<img src="./Button.svg" alt="imagen " srcset=""/>
+        <h1>
+        calculadora
+        </h1>
+        <img src="./suma.svg" alt="" onclick="resultadoSumar()"/>
+        <img src="./division.svg" alt="imagen " srcset="" onclick="mostrarMensaje()"/>
+        <img src="./uno.svg" alt="uno" id="uno" />
+        <img src="./dos.svg" alt="dos" id="dos" />
+        <img src="./tres.svg" alt="tres" id="tres" />
+
+<script >
+    let uno = document.getElementById("uno");
+    let dos = document.getElementById("dos");
+    let tres = document.getElementById("tres");
+    let num=0
+
+    uno.addEventListener("click", function() {
+        console.log("Has hecho clic en el número uno");
+         num=1
+                mostrarMensaje(num)
+    });
+    dos.addEventListener("click", function() {
+        console.log("Has hecho clic en el número dos");
+        num=2
+        mostrarMensaje(num)
+
+    });
+    tres.addEventListener("click", function() {
+        console.log("Has hecho clic en el número tres");
+        num=3
+        mostrarMensaje(num)
+    });
+
+    function resultadoSumar() {
+    console.log("El resultado de la suma es: " , 1+2);
+
+}
+
+    function mostrarMensaje(num) {
+        console.log("El número seleccionado es: " + num);
+    }
+
+  
+
+
+</script>
+
 
 </body>
 </html>
