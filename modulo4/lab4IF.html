@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //  let edad= prompt("Introduce tu edad:");
+    //PRIMERA SOLUCION
+    //  if(edad >=18){
+    //     alert("Eres mayor de edad");
+    //  } else {
+    //     alert("Eres menor de edad");
+    //  }
+     let Edad= prompt("Introduce tu edad:");
+
+     //SEGUNDA SOLUCION
+//    alert("Tu edad es: " + `${Edad} ${Edad >=18 ? "Eres mayor de edad" : "Eres menor de edad"}`);
+
+//TERCERA SOLUCION
+        // Usando switch para evaluar la edad
+        switch (Edad) {
+            case "18":
+                alert("Eres mayor de edad");
+                break;
+            case "17":
+                alert("Eres menor de edad");
+                break;
+            case "16":
+                alert("Eres menor de edad");
+                break;    
+            default:
+                alert("Edad no válida");
+                break
+        }
+
+     
+    </script>
+</body>
+</html>
