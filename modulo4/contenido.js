@@ -106,7 +106,7 @@ switch (dia) {
 let contador = 0;
 while (contador < 5) {
     console.log("Contador: " + contador);
-    contador++;
+    contador++; //5
 }
 
 //! 9. El bucle for
@@ -121,7 +121,7 @@ for (let i = 0; i < 5; i++) {             //
 // Ejemplo:
 let x = 3;
 do {
-    console.log("Valor de x: " + x);
+    console.log("Valor de x: " + x); //3
     x++;
 } while (x < 3);
 
@@ -131,8 +131,8 @@ do {
 let persona = { nombre: "Ana", edad: 25 , telefono:23423434};
 // console.log(persona['edad']);
 // console.log(persona.nombre);
-for (let propiedad in persona) {
-    console.log(propiedad + ": "   + persona[propiedad]);
+for (let prop in persona) {
+    console.log(prop + ": "   + persona[prop]);
 }
 
 //! 12. for...of
@@ -161,7 +161,7 @@ for (let i = 0; i < 10; i++) {
 // Puedes usar un bucle `for` para recorrer un array desde el último elemento.
 // Ejemplo:
 let numeros = [1, 2, 3, 4, 9];
-console.log(numeros.reverse());
+// console.log(numeros.reverse());
 // console.log(numeros.length);
 // console.log(numeros[numeros.length-1]);
 let arr=[]
@@ -181,3 +181,7 @@ for (let i = 1; i <= 10; i++) {
         console.log(i + " es impar");
 }
 }
+i=1 ; 👌;i++=2 // es impar 
+i=2 ; 👌;i++=3 // es impar 
+i=3 ; 👌;i++=4 // es par 
+i=4 ; 👌;i++=5// es impar 

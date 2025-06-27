@@ -8,13 +8,13 @@ if (a > 9 || a == 10) console.log(a);
 //* Opciones ✍:
 //* a) if (!(a < 10))
 //* b) if (a == 10 && a > 9)
-//* c) if (a > 9 || a == 10) ✔
+//* c) if (a > 9 || a == 10)  ✔
 //* d) if (a < 10)
 
 //! 2. La condición if(!x) puede ser reemplazada por:
 //* Opciones ✍:
 //* a) if (!!x)
-//* b) if (x == false) 
+//* b) if (x == false) ✔ 
 //* c) if (x === true)
 //* d) if (x > 0)
 //! 3. Reescribe el siguiente código usando el operador ternario:
@@ -23,8 +23,6 @@ if (a > 9 || a == 10) console.log(a);
 // } else {
 //     estado = "Deshabilitado";
 // }
-
-
 
 //* Opciones ✍:
 //* a) let estado = activo ? "Habilitado" : "Deshabilitado"; ✔
@@ -61,8 +59,8 @@ let puntaje= 50
 //* d) if (puntaje != 50)
 
 //! 7. ¿Qué valores deben tener las variables para que se ejecute el bloque?
-let edad=21
-let estudiante=false
+let edad
+let estudiante
 if (edad >= 21 && estudiante == false) {
      console.log("Sin descuento");
  }
@@ -84,8 +82,6 @@ if (edad >= 21 && estudiante == false) {
 //!     console.log("En uso");
 //! }
 
-let estado='Activo'
-switch (estado) { case 'Activo':console.log("En uso");break;}
 
 //* Opciones ✍:
 //* a) switch(estado) { case "Activo": console.log("En uso"); break; } ✔
@@ -169,12 +165,15 @@ for (let index = frutas.length-1; index >=0; index--) console.log(frutas[index])
 //! ¿Qué bloque puede reemplazar el do...while?
 //* Opciones ✍:
 //* a) while (b > 20) console.log(b);
-//* b) while (b < 20) console.log(b++); ✔ 
+//* b) while (b < 20) console.log(b++);  ✔
 //* c) while (b == 20) console.log(b);
 //* d) while (b > 15) console.log(b);
 
 //! 15. Analiza el siguiente código:
-for (let i = 8; i > 1; i -= 2) console.log("Hola"); 
+for (let i = 8; i > 1; i -= 2) console.log("Hola")
+ 
+
+
 //* ¿Cuántas veces se mostrará "Hola" en la consola?
 //* Opciones ✍:
 //* a) 4 ✔
@@ -215,7 +214,7 @@ let n = 5; while (n > 0) console.log(n--);
 //  ¿Qué mostrará este bucle?
  for (let clave in coche) console.log(clave);
 //* Opciones ✍:
-//* a) "marca", "modelo" ✔
+//* a) "marca", "modelo" ✔ 
 //* b) "Toyota", "Corolla"
 //* c) undefined
 //* d) Error
