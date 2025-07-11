@@ -55,11 +55,27 @@ console.log(multiplicarPorDos(9)); // -> 18
 function calcularCuadrado(numero) {
     return numero*numero; //4
 }
+
+calcularCuadrado(2); // -> 4    
+calcularCuadrado(3); // -> 9
+// 2^2=4
+// 3^2=9
 function calcularCubo(numero) {
     return calcularCuadrado(numero)*numero; //8
 }
+console.log(calcularCubo(2)); // -> 8
 
- console.log(calcularCubo(2)); // -> 8
+
+
+// 2^2=4 => 2*2 = 4
+// 3^2=9 => 3*3 = 9
+// 4^2=16 => 4*4 = 16
+
+// 2^3=8 => 2*2*2 = 8
+// 3^3=27 => 3*3*3 = 27
+// 4^3=64 => 4*4*4 = 64
+
+
 
 //! 5.0.4 Funciones - Variables Locales
 /*
@@ -93,6 +109,10 @@ function mostrarNumeros(num1,num2) {
 console.log(mostrarNumeros(1,2));
 
 //! Ejemplo simple
+
+
+console.log(6/0);
+
 function dividir(a, b) {
     if (b === 0) {
         return "Error: División por cero , cambiar el valor en b";
@@ -110,17 +130,26 @@ Podemos verificar los parámetros dentro de las funciones para asegurarnos de qu
 function restar(a,b) {
     return a-b    
 }
-console.log(restar('hola',true));
+function mul(c,d) {
+    return c*d
+}
+console.log(mul('hola','como estas'));
+console.log(mul('hola',4));
+console.log(mul(3,4));
+
+
 console.log(restar(9,2));
+console.log(restar('hola',3));
 //! Ejemplo de validación de parámetros
+
 function restar(a, b) {
     if (typeof a !== "number" || typeof b !== "number") {
         return "Error: Ambos argumentos deben ser números";
     }
     return a - b;
 }
-console.log(restar(10, "cinco")); // -> Error: Ambos argumentos deben ser números
 console.log(restar(10, 5)); // -> 5
+console.log(restar(10, "cinco")); // -> Error: Ambos argumentos deben ser números
 
 //! 5.1.2 Recursión
 /*
@@ -128,28 +157,48 @@ La recursión permite que una función se llame a sí misma para resolver proble
 */
 
 //! Ejemplo: calcular factorial
-// n!= n*(n-1)*(n-2).. . 1
-// 5!= 5*4*3*2*1=120=> 5!= 5*4!
+// n!= n*(n-1)*(n-2)*(n-3).... *1 
+// 5!= 5*4*3*2*1= 120=> 5!= 5*4!
 // 4!= 4*3*2*1 = 24 => 4!= 4*3!
 // 3!= 3*2*1 = 6 =>    3!= 3*2!
 // 2!= 2*1 =2 =>       2!=2*1! 
 // 1!= 1 =1 =>         1!=1
-// 0!=1
+// 0!= 1
 
 // 3!=3*2*1=6
 function factorial(n) {
-    while (n>=1) {
-        let cont=1
-      n=n*(n-cont)
-      cont++
-    }
+    if(n<0) return "Error: El número debe ser no negativo";
+    let resultado = 1; // Caso base
+  for( let i=1;i<=n;i++){
+    //   resultado = resultado * i; // Multiplicación acumulativa
+        resultado *= i; // Multiplicación acumulativa
+  }
+  return resultado; // Retorna el resultado finals
 }
+console.log(factorial(-5)); // -> 120
+
+// n=5; i = 1; 1<=5✔;resultado= 1*1 =>1 // Inicializa i en 1 | 
+//      i = 2; 2<=5✔;resultado= 1*2 =>2 // Inicializa i en 1 | 
+//      i = 3; 3<=5✔;resultado= 2*3 =>6 // Inicializa i en 1 | 
+//      i = 4; 4<=5✔;resultado= 6*4 =>24 // Inicializa i en 1 |
+//      i = 5; 5<=5✔;resultado= 24*5 =>120 // Inicializa i en 1 |
+
 
 function factorial(n) {
     if (n === 0 || n === 1) return 1; // Caso base
     return n * factorial(n - 1); // Llamada recursiva
 }
-console.log(factorial(5)); // -> 120
+
+
+n* factorial(n-1) // 5*factorial(4) => 5*24=120
+n * factorial(n-1) // 4*factorial(3) => 4*6=24
+n * factorial(n-1) // 3*factorial(2) => 3*2=6
+n * factorial(n-1) // 2*factorial(1) => 2*1=2
+n * factorial(n-1) // 1*factorial(n=0) => 1   
+// 0! = 1
+
+
+
 
 //! Ejemplo: encontrar la suma de un array
 function sumaArray(arr) {
