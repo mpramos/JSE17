@@ -44,3 +44,24 @@ for (const element of elementoPorSelectorTag) {
 console.log('Elemento por selector ID:');
 let idP= document.querySelector('#miId')
 console.log(idP);
+
+// 4. Agregar y eliminar atributos
+let elementoAdd= document.getElementById('miId')
+console.log(elementoAdd);
+
+elementoAdd.setAttribute('data-info', 'valor')
+
+// Usos practicos de setAtributte
+document.getElementById('miEnlace').setAttribute('href', 'https://www.google.com')
+
+// Agregar un atributo alt a un imagen
+document.querySelector('img').setAttribute('alt','Descripcion de la imagen 🏃‍♀️');
+document.querySelector('img').setAttribute('src','https://rickandmortyapi.com/api/character/avatar/472.jpeg')
+
+// Deshabilitar un botón
+document.querySelector('#miBoton').setAttribute('disabled', 'true')
+
+// Cmbiar el tipo de un input
+document.getElementById('miInput').setAttribute('type', 'password')
+// Eliminar un atributo con removeAttribute
+elementoAdd.removeAttribute('data-info')
