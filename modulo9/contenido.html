@@ -4,8 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .contenido {
+            background-color: lightblue;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin: 10px;
+            border: 1px solid red;
+        }
+        .nuevo-contenido {
+            background-color: lightgreen;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin: 10px;
+        }
+        #miId {
+            color: blue;
+            font-weight: bold;
+            border: 1px solid black;
+            background-color: lightyellow;
+        }
+        .contenido-html {
+            background-color: lightcoral;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin: 10px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
+    <div class="padre">
+
+    </div>
+    <div class="contenido-html">
+        <h1>Hola soy un contenido de un archivo HTML</h1>
+        <p>Este es un párrafo dentro de un div con clase contenido-html</p>
+        <p>Otro párrafo dentro del mismo div</p>
+
+    </div>
+    <!-- <div class="contenido">
+        Hola soy supuestamente un contenido de un archivo HTML
+    </div> -->
     <h1>Ejemplo de Manipulaion del DOM</h1>
     <p id="miId"> Este es un párrafo con Id</p>
     <p class="miClase"> Este es un párrafo con clase</p>
@@ -16,7 +59,7 @@
     <img src="miImagen.jpg">
     <button id="miBoton">Haz click</button>
     <input id="miInput" type="text" placeholder="Escribe algo aquí">
-
+    <input type="text" id="miInput2" placeholder="Escribe algo aquí">
     <form id="miFormulario">
         <input type="text" name="nombre" placeholder="Nombre">
         <button type="submit"> Enviar</button>
